@@ -1,0 +1,19 @@
+<article>
+  <div class="container main-content">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post__body">
+          <%= @post.body %>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="container">
+  <ul class="pager">
+    <li class="prev">
+      <%= link_to "See more posts", root_path %>
+    </li>
+  </ul>
+</div>
