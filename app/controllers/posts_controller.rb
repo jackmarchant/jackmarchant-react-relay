@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound do |error|
-    render :text => 'not found'
+    render "error/404"
   end
 
   def index
@@ -8,8 +8,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    # post_title = params[:id].gsub('-', ' ')
-    @post = Post.find(params[:id])
+    @post = Post.find_by!(slug: params[:id])
     @posts = Post.order('created_at DESC').limit(4).offset(1)
   end
 

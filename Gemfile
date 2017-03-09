@@ -19,6 +19,8 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'active_skin'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
+gem 'redcarpet'
+gem 'friendly_id', '~> 5.1.0'
 
 group :development, :test do
   gem 'sqlite3'

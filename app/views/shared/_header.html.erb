@@ -1,14 +1,4 @@
-<header class="intro-header"
-    <% if @post %>
-        <% if @post.image.file? %>
-          style="background-image: url(<%= image_path @post.image %>)"
-        <% else %>
-            style="background-image: url(<%= image_path( "home-bg.jpg") %>)"
-        <% end %>
-    <% else %>
-        style="background-image: url(<%= image_path( "home-bg.jpg") %>)"
-    <% end %>
->
+<header class="intro-header" style="background-image: url(<%= image_path( "header.jpg") %>)">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -20,7 +10,7 @@
                     <% else %>
                         <h1>Jack Marchant</h1>
                         <hr class="small">
-                        <span class="subheading">Full-stack Developer</span>
+                        <span class="subheading">Web Developer</span>
                     <% end %>
                 </div>
             </div>
