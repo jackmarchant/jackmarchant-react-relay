@@ -11,8 +11,4 @@ class Post < ApplicationRecord
   def content
     MarkdownService.new.render(body)
   end
-
-  # def to_param
-    # title.parameterize
-  # end
 end
