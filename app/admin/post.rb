@@ -3,6 +3,7 @@ ActiveAdmin.register Post do
   show do |t|
     attributes_table do
       row :title
+      row :slug
       row :body
       row :image do
         post.image? ? image_tag(post.image.url, height: '100') : content_tag(:span, "No image yet")
@@ -13,6 +14,7 @@ ActiveAdmin.register Post do
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs do
       f.input :title
+      f.input :slug
       f.input :body
       f.input :image, hint: f.post.image? ? image_tag(post.image.url, height: '100') : content_tag(:span, "Upload JPG/PNG/GIF image")
     end
