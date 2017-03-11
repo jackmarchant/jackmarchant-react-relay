@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   resources :posts
-
   root 'posts#index'
+  match '*path' => 'error#error_404', via: :all
 end
