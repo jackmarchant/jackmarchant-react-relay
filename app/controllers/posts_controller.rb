@@ -9,11 +9,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by!(slug: params[:id])
-    @posts = Post.order('created_at DESC').limit(4).offset(1)
   end
 
   private
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :slug)
     end
 end
