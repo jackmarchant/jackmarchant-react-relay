@@ -1,12 +1,11 @@
 class HomeController < ApplicationController
-  require 'http'
-
   def show
-    render html: get_route.html_safe
+    data = {heading: "Hello World"}
+    render html: get_route(data)
   end
 
   private
-    def get_route
-      HTTP.get(ENV["REACT_RENDER_URI"]).to_s
+    def get_route(data)
+      ReactRender.new(data).perform.html_safe
     end
 end
