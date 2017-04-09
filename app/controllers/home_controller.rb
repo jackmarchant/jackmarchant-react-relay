@@ -7,6 +7,6 @@ class HomeController < ApplicationController
 
   private
     def get_route
-      HTTP.get("https://react-render.herokuapp.com/home").to_s
+      HTTP.get(ENV["REACT_RENDER_URI"]).to_s
     end
 end
