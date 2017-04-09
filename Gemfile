@@ -22,8 +22,6 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'redcarpet'
 gem 'friendly_id', '~> 5.1.0'
 
-gem 'http'
-
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platform: :mri
