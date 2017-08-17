@@ -15,8 +15,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :jackmarchant, JackmarchantWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "jackmarchant.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  url: [host: "jackmarchant.com", port: 80]
 
 # Configure your database
 config :jackmarchant, Jackmarchant.Repo,
