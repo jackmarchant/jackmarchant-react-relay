@@ -1,2 +1,2 @@
 # Jack Marchant Website
-[https://jackmarchant.com](jackmarchant.com)
+[jackmarchant.com](https://jackmarchant.com)
