@@ -40,7 +40,10 @@ defmodule Jackmarchant.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:httpoison, "~> 0.12"},
+      {:hackney, "~> 1.8.0", override: true},
+      {:elixir_xml_to_map, "~> 0.1"}
     ]
   end
 
