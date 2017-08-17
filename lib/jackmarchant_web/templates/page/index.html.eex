@@ -1,25 +1,7 @@
 <div class="container main-content">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="post-preview">
-              <a href="/posts/react-one-year-later">
-                <h2 class="post-title">
-                  React – One year later
-                </h2>
-</a>              <p class="post-meta">I like learning, continuously improving my skills, and like most things I come across, they take a while to sink in. I’m sure it’s the same for most people. We get exposed to an idea, come across it on twitter or through a co-worker, then we think about it and compare it to what we previously thought. Some ideas make it to learnings qu...</p>
-            </div>
-            <hr>
-            <div class="post-preview">
-              <a href="/posts/first-impressions-of-elixir">
-                <h2 class="post-title">
-                  First Impressions of Elixir
-                </h2>
-</a>              <p class="post-meta">Elixir is a functional programming language based on Erlang. I’m told it’s very similar to Ruby, with a few tweaks and improvements to the developer experience and language syntax.
-
-[Detour – buckle your seatbelts]
-
-I’m drawn to Elixir because of my interest in Functional Programming, generally and specially in JavaScript. I start...</p>
-      </div>
+      <%= render JackmarchantWeb.PostView, "post_list.html", conn: @conn, posts: @posts %>
     </div>
   </div>
 </div>

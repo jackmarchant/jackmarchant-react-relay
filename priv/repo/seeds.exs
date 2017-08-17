@@ -1,14 +1,4 @@
-# Script for populating the database. You can run it as:
-#
-#     mix run priv/repo/seeds.exs
-#
-# Inside the script, you can read and write to any of your
-# repositories directly:
-#
-#     Jackmarchant.Repo.insert!(%Jackmarchant.SomeSchema{})
-#
-# We recommend using the bang functions (`insert!`, `update!`
-# and so on) as they will fail if something goes wrong.
+Jackmarchant.Repo.delete_all(Jackmarchant.Post)
 
 Jackmarchant.Repo.insert!(%Jackmarchant.Post{
   slug: "react-one-year-later",
@@ -20,4 +10,10 @@ Jackmarchant.Repo.insert!(%Jackmarchant.Post{
   slug: "first-impressions-of-elixir",
   title: "First Impressions of Elixir",
   body: "Elixir is a functional programming language based on Erlang. I’m told it’s very similar to Ruby, with a few tweaks and improvements to the developer experience and language syntax. [Detour – buckle your seatbelts] I’m drawn to Elixir because of my interest in Functional Programming, generally and specially in JavaScript."
+})
+
+Jackmarchant.Repo.insert!(%Jackmarchant.Post{
+  slug: "elixir-pattern-matching-in-a-nutshell",
+  title: "Elixir Pattern Matching in a nutshell",
+  body: "Before being introduced to Elixir, a functional programming language built on top of Erlang, I had no idea what pattern matching was. Hopefully, by the end of this article you will have at least a rudimentary understanding of how awesome it is."
 })
