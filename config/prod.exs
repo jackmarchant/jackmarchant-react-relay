@@ -18,6 +18,11 @@ config :jackmarchant, JackmarchantWeb.Endpoint,
   url: [host: "jackmarchant.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
+# Configure your database
+config :jackmarchant, Jackmarchant.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  pool_size: 10
+
 # Do not print debug messages in production
 config :logger, level: :info
 
