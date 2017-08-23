@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getPosts } from '../post-service';
+
+import { graphql, QueryRenderer } from 'react-relay';
+import modernEnvironment from '../relay-environment';
+import RelayHoc from '../relay-hoc';
 
 const PostItem = ({slug, title, body}) =>
   <div className="post-preview">
@@ -10,35 +13,33 @@ const PostItem = ({slug, title, body}) =>
     <div className="post-body">{body.replace(/(<([^>]+)>)/ig,"").substring(0, 250)}...</div>
   </div>
 
-class PostList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      posts: [],
-    };
-  }
+const PostList = ({ viewer }) => {
+  return (
+    <div className="post-list">
+      {viewer.map((post, i) => <PostItem key={i} {...post} />)}
+    </div>
+  );
+};
 
-  componentDidMount() {
-    getPosts().then(response => {
-      this.setState(() => ({
-        posts: response.data.posts
-      }));
-    });
-  }
-
-  render() {
-    const { posts } = this.state;
-
-    if (!posts.length) {
-      return null;
+const PostListRenderer = () => {
+  const query = graphql`
+    query PostListQuery {
+      posts {
+        id
+        slug
+        title
+        body
+      }
     }
+  `;
 
-    return (
-      <div className="post-list">
-        {posts.map((post, i) => <PostItem key={i} {...post} />)}
-      </div>
-    );
-  }
-}
+  return (
+    <QueryRenderer
+     environment={modernEnvironment}
+     query={query}
+     render={RelayHoc(PostList, 'posts')}
+    />
+  );
+};
 
-export default PostList;
+export default PostListRenderer;
