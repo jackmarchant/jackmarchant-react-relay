@@ -19,3 +19,5 @@ erl_crash.dump
 *.sublime-project
 node_modules/
 __generated__
+
+priv/static/js/*
