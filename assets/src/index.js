@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import getStateFromDom from './getStateFromDom';
 
-import { Router } from 'react-router';
+import { BrowserRouter as Router } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 import Header from './components/Header';
