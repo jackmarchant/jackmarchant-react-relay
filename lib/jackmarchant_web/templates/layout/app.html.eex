@@ -12,13 +12,7 @@
     <link rel="stylesheet" type="text/css" href="<%= static_path(@conn, "/css/app.css") %>" />
   </head>
   <body>
-    <%= render JackmarchantWeb.SharedView, "header.html", conn: @conn %>
-    <div class="container">
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
-    </div>
-    <%= render JackmarchantWeb.SharedView, "footer.html", conn: @conn %>
+    <%= render @view_module, @view_template, assigns %>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

@@ -1,10 +1,2 @@
-<div class="post-list">
-  <%= for post <- @posts do %>
-    <div class="post-preview">
-      <a href="/posts/<%=post.slug%>">
-        <h2 class="post-title"><%= post.title %></h2>
-      </a>
-      <div class="post-body"><%= post.body |> render_post_body %>...</div>
-    </div>
-  <% end %>
-</div>
+<div id="root"></div>
+<div style="display:none;" id="app-state"><%= assigns.props |> Poison.encode! %></div>

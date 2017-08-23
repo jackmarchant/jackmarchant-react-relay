@@ -1,7 +1,2 @@
-<div class="container main-content">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <%= render JackmarchantWeb.PostView, "post_list.html", conn: @conn, posts: @posts %>
-    </div>
-  </div>
-</div>
+<div id="root"></div>
+<div style="display:none;" id="app-state"><%= assigns.props |> Poison.encode! %></div>

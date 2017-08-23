@@ -16,3 +16,8 @@ erl_crash.dump
 /config/*.secret.exs
 
 .DS_Store
+*.sublime-project
+node_modules/
+__generated__
+
+priv/static/js/*
