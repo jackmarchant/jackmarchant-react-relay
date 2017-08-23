@@ -12,12 +12,12 @@
     "test:coverage": "yarn test -- --coverage",
     "lint": "./node_modules/.bin/eslint src/**",
     "build": "yarn lint && yarn ci",
-    "ci": "./node_modules/.bin/webpack -p --config config/webpack.config.prod.js",
+    "ci": "yarn test && yarn relay && ./node_modules/.bin/webpack -p --config config/webpack.config.prod.js",
     "exdev": "./node_modules/.bin/webpack -w --config config/webpack.config.exdev.js",
     "prettier": "node ./scripts/prettier.js write-changed",
     "prettier-all": "node ./scripts/prettier.js write",
     "precommit": "lint-staged",
-    "relay": "relay-compiler --src ./src/ --schema ./schema.json --watch"
+    "relay": "relay-compiler --src ./src/ --schema ./schema.json"
   },
   "repository": {
     "type": "git",
