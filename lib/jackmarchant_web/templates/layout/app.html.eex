@@ -15,7 +15,8 @@
     <%= render JackmarchantWeb.SharedView, "header.html", conn: @conn %>
     <div class="container">
       <main role="main">
-        <%= render @view_module, @view_template, assigns %>
+        <div id="root"></div>
+        <%#= render @view_module, @view_template, assigns %>
       </main>
     </div>
     <%= render JackmarchantWeb.SharedView, "footer.html", conn: @conn %>
