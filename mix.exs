@@ -43,7 +43,10 @@ defmodule Jackmarchant.Mixfile do
       {:cowboy, "~> 1.0"},
       {:httpoison, "~> 0.12"},
       {:hackney, "~> 1.8.0", override: true},
-      {:elixir_xml_to_map, "~> 0.1"}
+      {:elixir_xml_to_map, "~> 0.1"},
+      {:absinthe, ">= 1.3.0"},
+      {:absinthe_plug, ">= 1.3.0"},
+      {:absinthe_ecto, git: "https://github.com/absinthe-graphql/absinthe_ecto.git"},
     ]
   end
 
