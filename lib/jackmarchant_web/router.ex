@@ -17,7 +17,7 @@ defmodule JackmarchantWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/posts", PostController, :index
-    get "/posts/:slug", PostController, :show
+    get "/posts", PageController, :index
+    get "/posts/:slug", PageController, :index
   end
 end

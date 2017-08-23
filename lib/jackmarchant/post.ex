@@ -3,7 +3,6 @@ defmodule Jackmarchant.Post do
   import Ecto.Changeset
   alias Jackmarchant.Post
 
-
   schema "posts" do
     field :body, :string
     field :slug, :string
