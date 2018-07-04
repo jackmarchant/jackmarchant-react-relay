@@ -26,9 +26,8 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/expert360/ulyanov/issues"
+    "url": "https://github.com/jackmarchant/jackmarchant-react-relay/issues"
   },
-  "homepage": "https://github.com/expert360/ulyanov#readme",
   "babel": {
     "presets": [
       [
